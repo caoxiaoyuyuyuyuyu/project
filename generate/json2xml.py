@@ -7,7 +7,7 @@ def json_to_xml(json_data,output_name):
     root = ET.Element("annotation")
 
     # 添加基础信息
-    ET.SubElement(root, "folder").text = "output"
+    ET.SubElement(root, "folder").text = "weight"
     ET.SubElement(root, "filename").text = f"{output_name}.jpg"
     ET.SubElement(root, "path").text = os.path.join("G:\AI\crnn.pytorch-master\generate\ooutput_jpg_dir", f"{output_name}.jpg")
 
