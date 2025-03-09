@@ -16,7 +16,7 @@ config = {
     "font_size_range": (24, 26),
     "num_expressions": 52,
     "output_xml_dir": "output_xml_dir",
-    "output_jpg_dir": "output_jpg_dir",
+    "output_jpg_dir": "testjpg",
     "padding": 40,
     "noise_level": 0.01,
     "texture_alpha": 0.03,
@@ -73,7 +73,8 @@ def generate_image(output_name):
 
     cols = 4
     col_width = config["image_size"][0] // cols
-    x_start = config["padding"]
+    # x_start = config["padding"]
+    x_start = 0
     y = config["padding"]
     max_height = 0
     expressions_data = []
@@ -119,12 +120,12 @@ def generate_image(output_name):
 
     # 保存结果
     img.save(os.path.join(config["output_jpg_dir"], f"{output_name}.jpg"))
-    with open(os.path.join(config["output_xml_dir"], f"{output_name}.xml"), "w") as f:
-        f.write(json_to_xml(expressions_data, output_name))
+    # with open(os.path.join(config["output_xml_dir"], f"{output_name}.xml"), "w") as f:
+    #     f.write(json_to_xml(expressions_data, output_name))
 
 
 if __name__ == "__main__":
     os.makedirs(config["output_jpg_dir"], exist_ok=True)
     os.makedirs(config["output_xml_dir"], exist_ok=True)
-    for i in range(200):
+    for i in range(2):
         generate_image(f"math_question{i}")

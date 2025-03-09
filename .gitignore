@@ -1,0 +1,17 @@
+# PyCharm/IntelliJ IDEA 配置
+.idea/
+_pycharm_/
+*.iml
+*.ipr
+*.iws
+
+# 其他常见忽略项（可选）
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+*.pot
+*.sqlite3
+env/
+venv/
+.DS_Store

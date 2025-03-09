@@ -74,8 +74,8 @@ if __name__ == "__main__":
     CLASSES = ["MQ"]  # 如果多类别，例如：["cat", "dog", "person"]
 
     # 输入输出路径
-    XML_DIR = r"G:\AI\crnn.pytorch-master\generate\output_xml_dir"  # XML文件夹路径
-    OUTPUT_DIR = r"G:\AI\crnn.pytorch-master\generate\output_yolo_dir"  # 输出文件夹
+    XML_DIR = r"output_xml_dir"  # XML文件夹路径
+    OUTPUT_DIR = r"output_yolo_dir"  # 输出文件夹
 
     # 执行转换
     batch_convert(XML_DIR, OUTPUT_DIR, CLASSES)

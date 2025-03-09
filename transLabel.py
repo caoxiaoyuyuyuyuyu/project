@@ -21,7 +21,7 @@ class TransedResult(object):
         self.boxes = boxes
         self.result = []
         self.alpha = '0123456789+-×÷='
-        self.weight_path = r"output/crnn.horizontal.101.pth"
+        self.weight_path = r"output/weight_4000_epoch300.pth"
         self.net = crnn.CRNN(num_classes=len(self.alpha))
         self.net.load_state_dict(torch.load(self.weight_path, map_location='cpu',
                                        weights_only=False)['model'])

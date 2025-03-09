@@ -87,7 +87,7 @@ if __name__ == '__main__':
     parse.add_argument("--direction", type=str, choices=['horizontal', 'vertical'],
                        default='horizontal', help="horizontal or vertical")
     parse.add_argument("--image-path", type=str, default=None, help="test image path")
-    parse.add_argument("--weight-path", type=str, default='output/crnn.horizontal.101.pth', help="weight path")
+    parse.add_argument("--weight-path", type=str, default='output/weight_4000_epoch300.pth', help="weight path")
     parse.add_argument("--image-dir", type=str, default='testdir', help="test image directory")
     arguments = parse.parse_args(sys.argv[1:])
     main(arguments)

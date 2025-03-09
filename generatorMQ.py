@@ -42,8 +42,8 @@ class GeneratorMQ(Dataset):
         self.font_size_list = [30, 25, 20, 18]
         self.font_list = []  # 二维列表[size,font]
         self.font_paths = [
-            os.path.join(r"G:\AI\crnn.pytorch-master\fonts", f)
-            for f in os.listdir(r"G:\AI\crnn.pytorch-master\fonts")
+            os.path.join(r"fonts", f)
+            for f in os.listdir(r"fonts")
             if f.lower().endswith(('.ttf', '.otf', '.ttc'))
         ]
         for size in self.font_size_list:
