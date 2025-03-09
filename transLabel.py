@@ -40,10 +40,10 @@ class TransedResult(object):
         # ocr识别
         prediction = inference_images(self.net, self.alpha, image_cells)
         for i in range(len(prediction)):
-            print(prediction[i])
-            # self.result.append(self.caculate(prediction[i]))
-        for i in range(len(self.result)):
-            print(prediction[i], self.result[i])
+            # print(prediction[i])
+            self.result.append(self.caculate(prediction[i]))
+        # for i in range(len(self.result)):
+        #     print(prediction[i], self.result[i])
         return self.result
     def caculate(self, prediction):
         pattern = r'^\s*\d{1,8}\s*[+\-×÷]\s*\d{1,8}\s*=?$'

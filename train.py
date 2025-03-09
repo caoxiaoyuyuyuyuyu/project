@@ -178,7 +178,7 @@ if __name__ == '__main__':
     parser.add_argument("--direction", type=str, choices=['horizontal', 'vertical'],
                         default='horizontal', help="horizontal or vertical")
     parser.add_argument("--batch-size", type=int, default=128, help="batch size")
-    parser.add_argument("--epochs", type=int, default=100, help="epochs")
+    parser.add_argument("--epochs", type=int, default=200, help="epochs")
     parser.add_argument("--init-epoch", type=int, default=100, help="init epoch")
     parser.add_argument("--lr", type=float, default=1e-2, help="learning rate")
     parser.add_argument('--momentum', default=0.9, type=float, help='momentum')
