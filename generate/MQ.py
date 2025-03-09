@@ -9,8 +9,8 @@ from generate.json2xml import json_to_xml
 config = {
     "image_size": (900, 800),
     "font_paths": [
-        os.path.join(r"G:\AI\crnn.pytorch-master\fonts", f)
-        for f in os.listdir(r"G:\AI\crnn.pytorch-master\fonts")
+        os.path.join(r"G:\AI\MQOCR\static\fonts", f)
+        for f in os.listdir(r"G:\AI\MQOCR\static\fonts")
         if f.lower().endswith(('.ttf', '.otf', '.ttc'))
     ],
     "font_size_range": (24, 26),
@@ -126,6 +126,6 @@ def generate_image(output_name):
 
 if __name__ == "__main__":
     os.makedirs(config["output_jpg_dir"], exist_ok=True)
-    os.makedirs(config["output_xml_dir"], exist_ok=True)
+    # os.makedirs(config["output_xml_dir"], exist_ok=True)
     for i in range(2):
         generate_image(f"math_question{i}")

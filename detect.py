@@ -38,4 +38,4 @@ def detect(source):
     # print(len(results[0].boxes))
     # print(results[0].boxes.data)
 if __name__ == '__main__':
-    detect(r'static/uploads/math_question0.jpg')
+    detect(r'generate/testjpg/math_question0.jpg')

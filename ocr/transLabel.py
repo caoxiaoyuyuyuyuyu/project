@@ -35,6 +35,8 @@ class TransedResult(object):
             xmax = box[2]
             ymax = box[3]
             img_cell = self.orig_img[int(ymin):int(ymax), int(xmin):int(xmax)]
+            # cv2.imshow('img', img_cell)
+            # cv2.waitKey(0)
             image_cells.append(img_cell)
         # ocr识别
         prediction = inference_images(self.net, self.alpha, image_cells)
